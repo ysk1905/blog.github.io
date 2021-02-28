@@ -1,0 +1,311 @@
+body {
+	transition: .5s;
+	background: linear-gradient(#000, #111 55%);
+	color: white;
+	font-family: Montserrat, 
+	Rajdhani, Play, Lato, 
+	Oswald, sans-serif;
+}
+
+::selection {
+	background-color: #fff;
+	color: #000;
+}
+
+.card .card-body .card-title::selection, .card .card-body .content-text::selection, .card .card-body .content-text .clipped-text::selection {
+	background-color: #111;
+	color: #eee;
+}
+
+.clipped-text.collapsing {
+	display: inline-block;
+}
+
+.top {
+	background: url("../img/e-summit/E-Summit19.png") center no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+.Big-E, .Big-Year {
+	display: inline-block;
+	transition: .5s;
+	transform-origin: bottom;
+	animation: tada 1.5s infinite alternate;
+}
+
+.Big-Year {
+	animation: rubberBand 2s infinite;
+}
+
+@media screen and (min-width:275px) and (max-width:440px) {
+	.top {
+		background-size: 220% 100%;
+	}
+}
+
+@media screen and (min-width:440px) and (max-width:575px) {
+	.top {
+		background-size: 170% 100%;
+	}
+}
+
+@media screen and (min-width:1200px) {
+	.top {
+		background-size: 100% 100%;
+	}
+}
+
+@keyframes underline-spread {
+	from {width: 1%;}
+	to {width: 100%;}
+}
+
+@keyframes arrow-inside-oscillation {
+	from { padding-top: 0; }
+	to 	 { padding-top: 1.5em; }
+}
+
+@keyframes launch-and-settle {
+	from, to { transform: translateY(0) rotate(270deg); }
+	70%, 95% 	 { transform: translateY(-100%) rotate(270deg); }
+}
+
+.scroll-indicator {
+	width: 2.5em;
+	height: 2.5em;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%);
+	border-radius: 50%;
+	border: .1em solid #fff;
+	text-decoration: none !important;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+	background: linear-gradient(#33333333, rgba(51, 51, 51, 0.4)) transparent;
+	overflow: hidden;
+	transition: .25s;
+	animation: arrow-inside-oscillation .75s infinite alternate;
+}
+
+a.fas.fa-chevron-down:hover {
+	color: aliceblue;
+	animation: none;
+	padding-top: .75em;
+	box-shadow: 1px 1px 2px #555;
+}
+
+.top-placeholder {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 98%;
+	padding:.1em;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 1px white;
+	z-index: -1;
+}
+
+@media screen and (max-width:768px) {
+	.scroll-indicator {
+		zoom: .8;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.scroll-indicator {
+		zoom: .6;
+	}
+
+	#page-main-header {
+		font-size: 2.5em;
+	}
+}
+
+/* Setting ScrollTrigger.js elements animation with visible and invisible classes */
+.invisible {
+	opacity: 0.000001;
+	/* Don't set any animation for invisible, this class gets toggled on every scroll, so it can cause view issues when scrolling near the element block */
+	/* animation: fadeOutDown .7s ease-in-out; */	
+}
+
+.visible {
+	opacity: 1;
+	animation: fadeInUp .5s ease-out;
+	/* animation: fadeInLeft .5s ease-out; */
+}
+
+.esummit-head [data-trigger].head-content.visible {
+	animation: zoomIn .75s linear;
+}
+
+#page-main-header[data-trigger-once] {
+	animation: tada .75s linear;
+}
+
+#page-main-header {
+	font-family: Oswald, 
+	Montserrat, Play, Lato, 
+	impact, showcard gothic, 
+	Roboto, Open Sans,
+	arial black, sans-serif;
+	color: #fff;
+	text-align: center;
+	margin: 1em auto;
+	margin-top: 2em;
+	letter-spacing: 1.5px;
+	word-spacing: 2px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0.4px #5D5C91;
+}
+
+.content-block {
+	padding: 1em 0.5em;	
+	transition: .5s;
+	margin-bottom: .5em;
+}
+
+.content-block:hover {
+	border-radius: .25em;
+	box-shadow: 0 0 .1em #ccc;
+}
+
+.esummit-head {
+	text-align: center;
+	font-weight: 600;
+}
+
+.esummit-head .head-content {
+	width: fit-content;
+	margin: auto;
+	padding: 1em;
+	/* border-bottom: #5D5C91; */
+}
+
+.esummit-head .head-content::after {
+	content: "";
+	display: block;
+	background: #ffffff00;
+	height: 2px;
+	width: 0%;
+	transition: .5s;
+}
+
+@media screen and (min-width:768px) {
+	.esummit-head .head-content:hover, .esummit-subhead:hover {
+		transition: .1s;
+		/* transform: scale(1.001); */
+		opacity: .92;
+	}
+}
+
+.content-block:hover .esummit-head .head-content::after {
+	background: #fff;
+	height: 2px;
+	animation: underline-spread .75s ease-out 1 forwards;
+}
+
+.event-subevents .subevent-cards:hover .esummit-subhead {
+	text-decoration: underline dashed;
+	text-underline-position: under;
+}
+
+.content-block.event-datetimeplace {
+	background: linear-gradient(#00000070, #00000080), url("../img/e-summit/esummit-1.jpg") center no-repeat fixed;
+	background-size: cover;
+	min-height: 30vh;
+}
+
+.event-datetimeplace .info-cards > div {
+	background: #fff;
+	color: blue;
+	padding: .5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.event-datetimeplace .info-cards > div:hover {
+	transition: .3s;
+	color: #fff;
+	background: #08f;
+}
+
+.event-datetimeplace .info-cards > div span.content-subhead {
+	font-weight: bold;
+}
+
+.events-category, .workshops-category {
+	justify-content: space-around;
+	margin: .5em auto;
+}
+
+.subevent-cards .card {
+	margin: .5em;
+	color: #111;
+}
+
+.subevent-cards .card .card-body::selection {
+	/* color: #555;
+	background-color: #aaa; */
+	background-blend-mode: difference;
+}
+
+@media screen and (min-width:300px) and (max-width:550px) {
+	.content-block.event-datetimeplace {
+		background-size: 145% 100%;
+	}
+}
+
+ul.points-list {
+	list-style: unset;
+	padding-left: 1em;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	/* font-size: 2em; */
+	opacity: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	mix-blend-mode: difference;
+	z-index: 5;
+}
+
+.back-to-top > small.option-indicator-label {
+	font-size: x-small;
+	user-select: none;
+}
+
+.speakers.content-block .row {
+	justify-content: space-evenly;
+}
+
+.speaker-card {
+	background: transparent;
+}
+
+.speaker-card .card-img {
+	max-width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.content-text {
+	text-align: justify;
+}
+
+#Frequently-Asked-Questions {
+	text-align: justify;
+}
+
+footer.site-footer {
+	font-family: unset;
+}

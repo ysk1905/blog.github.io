@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position:relative;
+}
+
+.outer-box {
+    padding:0 2.7% 2.7%;
+	font-family: 'Lato', sans-serif;
+    height:auto;
+    color:#222;
+}
+
+.forthcoming-event h2 {
+    text-align:center;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:3em;
+}
+
+.heading span {
+    font-size:2em;
+    display:inline-block;
+    animation: ringing 1s linear infinite;
+}
+
+@-webkit-keyframes ringing {
+    from,35%,to {
+        transform: rotate(0deg);
+    }
+    5%{
+        transform: rotate(30deg);
+    }
+    10%{
+        transform: rotate(-30deg);
+    }
+    15%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    30%{
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes ringing {
+    from,70%,to {
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    30%{
+        transform: rotate(30deg);
+    }
+    40%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+}
+
+.heading h2{
+	font-family: Oswald, Montserrat, Lato, impact, showcard gothic, Roboto, Open Sans, bernard mt condensed, broadway, arial black, sans-serif;
+	letter-spacing: 1.5px;
+	word-spacing: 2px;
+	text-shadow: 1px 1px 0.4px #5D5C91;
+	font-weight:600;
+    display:inline-block;
+    margin-right:0.5em;
+    margin-left:1.5em;
+}
+
+.event {
+    margin-bottom:2em;
+}
+
+.event h3{
+    font-weight:bold;
+    margin-bottom:1em;
+    word-spacing:0.25em;
+    text-align: center;
+}
+
+.event img {
+    border-radius:1em;
+    margin-bottom:1.2em;
+    transition: all 0.5s;
+    display:block;
+    margin:0 auto;
+}
+
+#the-triangle-trail img {
+    height:22em;
+    width:22em;
+}
+
+#the-triangle-trail:hover>img {
+    height:25em;
+    width:25em;
+    max-width: 100%;
+}
+
+#ideation-to-innovation img {
+    height:22em;
+    width:18em;
+}
+
+#ideation-to-innovation img:hover {
+    height:25em;
+    width:20em;
+}
+
+.event-info {
+    margin:2em 4em 1em;
+}
+
+.event-info .quote {
+    text-align:center;
+}
+
+.event-details {
+    margin-bottom:2em;
+    text-align:center;
+}
+
+ul.guidelines {
+    list-style-type: disc;
+}
+
+.register{
+    border:none;
+    padding:1em 3em;
+    background-color:rgba(255,0,0,0.75);
+    color:white;
+    border-radius:1em;
+    font-size:1.2em;
+    display:block;
+    margin:0 auto;
+}
+
+.register:focus {
+    outline:none;
+}
+
+.register:hover {
+    background-color: red;
+}
+
+.register span {
+    display:inline-block;
+    margin-left:0.25em;
+}
+
+.registration-form {
+    text-align:left;
+    position:fixed;
+    top: 0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background-color: rgb(255,255,255);
+    z-index:2;
+    display:none;
+    padding-top:3.75em;
+    overflow: auto;
+}
+
+.cancel{
+    border:none;
+    background-color:#fff;
+    display:block;
+    margin:2em 2em 4em;
+}
+
+.cancel:focus {
+    outline:none;
+}
+
+.cancel span {
+    font-size:1.5em;
+    font-weight: normal;
+    color:red;
+}
+
+.participant-info {
+    width:80vw;
+    margin:0 auto;
+}
+
+.registration-form input, .registration-form textarea {
+    display:block;
+}
+
+.registration-form input:focus {
+    outline:none;
+}
+
+.registration-form input, .registration-form select {
+    margin-bottom: 3em;
+    width:inherit;
+    border:none;
+    border-bottom:2px solid #666;
+}
+
+.registration-form select:focus {
+    box-shadow: none;
+    border:none;
+    border-bottom:2px solid #666;
+}
+
+.error{
+    background-color:red;
+    display:none;
+    padding:0.25em 0.5em;
+    font-size:0.75em;
+    color: white;
+    position: relative;
+    top: -3em;
+    border-radius: 0.6em;
+  }
+
+.registration-form input[type="submit"] {
+    width:10vw;
+    margin:1em auto 3em;
+    border-bottom:none;
+    padding:1em 2em;
+    background-color: rgba(255,0,0,0.75);
+    color:#fff;
+    border-radius:1em;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: red;
+}
+
+#ideation-to-innovation .flex{
+    display:flex;
+    justify-content: center;
+}
+
+#ideation-to-innovation a {
+    display:inline;
+    color:white;
+    cursor:pointer;
+}
+
+#ideation-to-innovation a:hover {
+    text-decoration:none;
+}
+
+div.social-share {
+    text-align: center;
+    margin: auto;
+    padding: 1.5em 0;
+}
+
+div.social-share .social-media-icon {
+    padding: .25em;
+}
+
+div.social-share .social-media-icon:hover {
+    text-decoration: none;
+    color: #fff;
+    /* color: blue; */
+    background: blue;
+    /* border-radius: 50%; */
+}
+
+div.social-share .fa-twitter {
+    color: #38f;
+}
+
+div.social-share .fa-twitter:hover {
+    color: #fff;
+    background: #38f;
+}
+
+div.social-share .fa-tumblr {
+    color: #001935;
+}
+
+div.social-share .fa-tumblr:hover {
+    color: #fff;
+    background: #001935;
+}
+
+div.social-share .fa-whatsapp {
+    color: #0b5;
+}
+
+div.social-share .fa-whatsapp:hover {
+    color: #fff;
+    background: #0dbe50;
+}
+
+.QR {
+    width:10em;
+    height:10em;
+    margin:0 auto;
+}
+
+
+@media (max-width:1024px) {
+    .heading h2 {
+        margin-top:2em;
+    }
+    .event-info {
+        margin: 2em 2em 1em;
+    }
+    .register {
+        margin-bottom: 2em;
+    }
+    .cancel {
+        margin-top:4em;
+    }
+    .registration-form input[type="submit"] {
+        width:15vw;
+        margin-top:5em;
+    }
+}
+
+@media (max-width:768px) {
+    .heading h2 {
+        margin-top:0;
+    }
+    .event-info {
+        margin: 2em 0.5em 1em;
+    }
+    .register {
+        background-color: red;
+    }
+    .registration-form {
+        padding-top:3.5em;
+    }
+    .cancel {
+        margin-top:3em;
+    }
+    .registration-form input[type="submit"] {
+        background-color:red;
+    }
+}
+
+@media (max-width:425px) {
+    #the-triangle-trail img {
+        height:18em;
+        width:18em;
+    }
+    #the-triangle-trail img:hover {
+        height:18em;
+        width:18em;
+    }
+    #ideation-to-innovation img {
+        height:22em;
+        width:17em;
+    }
+    #ideation-to-innovation img:hover {
+        height:22em;
+        width:17em;
+    }
+    .event-info {
+        text-align: justify;
+    }
+    .participant-info {
+        width:91vw;
+    }
+    .cancel {
+        margin-left:0.5em;
+        /* margin-bottom:2em; */
+    }
+    .registration-form input[type="submit"] {
+        width:60vw;
+        margin-bottom: 2em;
+    }
+    div.social-share .social-media-icon {
+        padding-left: .5em;
+        padding-right: .5em;
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width:375px) {
+    .heading h2 {
+        font-size:1.8em;
+        margin-right: 0.2em;
+        margin-left: 0.5em;
+    }
+    .heading span {
+        font-size:1.5em;
+    }
+    #the-triangle-trail img {
+        height:17em;
+        width:17em;
+    }
+    #the-triangle-trail img:hover {
+        height:17em;
+        width:17em;
+    }
+    #ideation-to-innovation img {
+        height:20em;
+        width:15em;
+    }
+    #ideation-to-innovation img:hover {
+        height:20em;
+        width:15em;
+    }
+    .registration-form input[type="submit"] {
+        width:80%;
+    }
+    .social-sharing-buttons{
+        display: flex !important;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:320px) {
+    .event h3 {
+        word-spacing: 0.1em;
+    }
+    .registration-form input[type="submit"] {
+        width:50vw;
+    }
+}
